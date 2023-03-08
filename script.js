@@ -37,7 +37,7 @@ function handleSymbol(symbol) {
             }
             break;
         case '+':
-        case '-':
+        case '−':
         case '×':
         case '÷':
             handleMath(symbol);
@@ -49,7 +49,7 @@ function handleMath(symbol) {
     if (buffer === '0') {
         return;
     }
-    const intBuffer = parent(buffer);
+    const intBuffer = parseInt(buffer);
     if (runningTotal === 0) {
         runningTotal = intBuffer;
     } else {
